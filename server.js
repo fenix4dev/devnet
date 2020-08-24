@@ -6,6 +6,9 @@ const app = express();
 //Connects server to DB through mongoose
 connectDB();
 
+//Init Middleware
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) => res.send('API Running...'));
 
 //Define Routes
