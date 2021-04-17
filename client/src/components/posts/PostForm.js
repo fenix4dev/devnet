@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addPost } from '../../actions/post';
+import { addComment } from '../../actions/post';
 
-const PostForm = ({ addPost }) => {
+const PostForm = ({ addPost, addComment }) => {
   const [text, setText] = useState('');
 
   return (
@@ -16,6 +17,7 @@ const PostForm = ({ addPost }) => {
         onSubmit={(e) => {
           e.preventDefault();
           addPost({ text });
+          // addComment({ text });
           setText('');
         }}
       >
@@ -36,6 +38,7 @@ const PostForm = ({ addPost }) => {
 
 PostForm.propTypes = {
   addPost: PropTypes.func.isRequired,
+  addComment: PropTypes.func.isRequired,
 };
 
-export default connect(null, { addPost })(PostForm);
+export default connect(null, { addPost, addComment })(PostForm);
