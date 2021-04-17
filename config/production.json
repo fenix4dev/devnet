@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://fittyuser:Fitty@123@devnet.tepyw.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "27d993ff14b2410f8fbf",
+    "githubSecret": "c697b9aa1c3090558290434e6160a0ddcec47dc6"
+  }
